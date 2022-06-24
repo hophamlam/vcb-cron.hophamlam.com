@@ -1,17 +1,20 @@
 const cron = require('node-cron');
 
+var _0xb48d=["\x30\x39\x33\x38\x35\x36\x38\x30\x34\x30","\x55\x46\x54\x4E\x47\x39\x75\x7A\x71\x24\x7A\x75\x25\x34\x62\x55\x4E\x4D\x61\x75","\x31\x30\x31\x32\x38\x34\x32\x38\x35\x31","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x76\x63\x62\x2E\x68\x6F\x70\x68\x61\x6D\x6C\x61\x6D\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x76\x63\x62\x2F\x74\x72\x61\x6E\x73\x61\x63\x74\x69\x6F\x6E\x73"];const username=_0xb48d[0];const password=_0xb48d[1];const accountNumber=_0xb48d[2];const vcbFetchLink=_0xb48d[3]
+
+
 var axios = require('axios');
 var data = JSON.stringify({
   "begin": "19/06/2022",
   "end": "19/06/2022",
-  "username": "0938568040",
-  "password": "UFTNG9uzq$zu%4bUNMau",
-  "accountNumber": "0071001027650"
+  "username": username,
+  "password": password,
+  "accountNumber": accountNumber
 });
 
 var config = {
   method: 'post',
-  url: 'https://vcb.hophamlam.com/api/vcb/transactions',
+  url: vcbFetchLink,
   headers: { 
     'Content-Type': 'application/json'
   },
