@@ -1,0 +1,5 @@
+version: "3.8"
+services:
+  vcb-spam-post-app:
+    build: .
+    command: npm start
